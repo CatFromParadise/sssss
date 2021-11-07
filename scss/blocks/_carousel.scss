@@ -1,0 +1,67 @@
+$count-of-slides: 3;
+
+
+
+.carousel{
+  width: 200px;
+  overflow: hidden;
+  position: relative;
+  &:hover{
+    .carousel__nav{
+      opacity: 1;
+    }
+  }
+
+
+  &__inner{
+    position: relative;
+    display: flex;
+    transition-duration: 1s;
+  }
+  &__nav{
+    position: absolute;
+    opacity: 0;
+    top: 45%;
+    padding: .5rem;
+    font-size: 200%;
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 15px;
+    margin: .3rem;
+    transition-duration: .5s;
+    color: #fff;
+    &:hover{
+      cursor: pointer;
+    }
+    &.prev{
+      left: 0;
+    }
+    &.next{
+      right: 0;
+    }
+  }
+
+  .dot{
+    visibility: hidden;
+  }
+
+
+  @for $i from 1 through $count-of-slides{
+    .dot:nth-child(#{$i}):checked ~.carousel__inner{
+      left: ($i - 1) * -200px;
+    }
+  }
+  
+  label{
+    margin-right: 1rem;
+    padding: 0.5rem;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+
+

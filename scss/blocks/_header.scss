@@ -1,0 +1,25 @@
+@import '../helpers/_helper-pack.scss';
+
+.header{
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin:0;
+  background-color: $main-color;
+  align-items: center;
+  transition: 1s ease;
+  &.hide{
+    top: -110px;
+  }
+}
+
+
+
+
+
+

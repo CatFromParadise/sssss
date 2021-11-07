@@ -1,0 +1,11 @@
+@import '../helpers/_helper-pack.scss';
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border: 2px solid $font-color;  
+  margin: 2rem;
+}
